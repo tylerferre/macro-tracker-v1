@@ -1,4 +1,3 @@
-import React from 'react'
 import Goal from './components/Goal'
 import Daily from './components/Daily'
 
