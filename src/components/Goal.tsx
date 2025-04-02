@@ -3,9 +3,14 @@ import { Context } from "../ContextProvider";
 
 const Goal = () => {
 
-    const {setGoal, protein, calories, setDaily}:any = useContext(Context)
-    const [edit, setEdit] = useState(false)
-    const [input, setInput] = useState({protein: ""||protein, calories: ""||calories})
+    interface InputState {
+        protein: string;
+        calories: string;
+    }
+
+    const {setGoal, protein, calories, setDaily}:any = useContext(Context);
+    const [edit, setEdit] = useState(false);
+    const [input, setInput] = useState<InputState>({protein: protein || "", calories: calories || ""});
 
     const handleChange = (e:any) => {
         const {name, value} = e.target
@@ -36,7 +41,7 @@ const Goal = () => {
 
     return (
         <div className="goal">
-            <button className="edit" onClick={()=> setEdit(prev => !prev)}>{!edit ? <span className="material-symbols-rounded">edit</span> : <span className="material-symbols-rounded">close</span>}</button>
+            <button className="edit" onClick={()=> setEdit(prev => !prev)}>{!edit ? <span>Edit Goal</span> : <span className="material-symbols-rounded">close</span>}</button>
             <h1>Goal</h1>
             <h3>Calories: 
                 {!edit ? <span> {calories}</span> 
@@ -60,7 +65,7 @@ const Goal = () => {
                     placeholder="Protein"
                 />}
             </h3>
-            {edit && <button onClick={handleSubmit}>Enter</button>}
+            {edit && <button className="daily-btn" onClick={handleSubmit}>Enter</button>}
         </div>
     )
 }

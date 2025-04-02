@@ -1,27 +1,27 @@
-import { useContext, useState } from 'react'
-import { Context } from '../ContextProvider'
+import { useContext, useState } from 'react';
+import { Context } from '../ContextProvider';
 
 const Daily = () => {
 
-    const {dailyProtein, dailyCalories, subtractMacros, reset}:any = useContext(Context)
-    const initForm = {calories: '', protein: ''}
-    const [formData, setFormData] = useState(initForm)
+    const {dailyProtein, dailyCalories, subtractMacros, reset}:any = useContext(Context);
+    const initForm = {calories: '', protein: ''};
+    const [formData, setFormData] = useState(initForm);
 
     const handleChange = (e:any) => {
         const {name, value} = e.target
         setFormData((prevState:any) => ({
             ...prevState,
             [name]: value
-        }))
+        }));
     }
 
     const handleSubmit = (e:any) => {
-        e.preventDefault()
+        e.preventDefault();
 
-        localStorage.removeItem('Daily Calories')
-        localStorage.removeItem('Daily Protein')
-        subtractMacros(formData['calories'], formData['protein'])
-        setFormData(initForm)
+        localStorage.removeItem('Daily Calories');
+        localStorage.removeItem('Daily Protein');
+        subtractMacros(formData['calories'], formData['protein']);
+        setFormData(initForm);
     }
 
     return (
@@ -48,9 +48,9 @@ const Daily = () => {
                     placeholder='Protein'
                     required
                 />
-                <button><span className="material-symbols-rounded">restaurant</span></button>
+                <button className='daily-btn'>Enter</button>
             </form>
-            <button className='reset' onClick={reset}><span className="material-symbols-rounded">refresh</span></button>
+            <button className='reset' onClick={reset}>Reset</button>
         </>
     )
 }

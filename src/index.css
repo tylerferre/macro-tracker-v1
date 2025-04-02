@@ -1,18 +1,13 @@
 body{
-  background-color: #232323;
-  color: #ffffff;
+  background-color: white;
   line-height: 10px;
   text-align: center;
   margin-top: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'inter'
 }
 
 button{
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid white;
-  background: linear-gradient(45deg, #520075, rgb(162, 0, 255));
-  color: white;
 }
 
 h1{
@@ -30,15 +25,26 @@ span{
 input{
   height: 25px;
   border-radius: 10px;
+  border: 1px solid #cfcfcf;
   text-align: center;
+  background-color: #cfcfcf;
+}
+
+input[type=number]::-webkit-inner-spin-button{
+  height: 30px;
+  color: #00a1a4;
+
 }
 
 input:focus{
-  background-color: #b876daf0;
+  border: 1px solid #00a1a4;
 }
 
-input:focus::placeholder{
-  color: white;
+.app {
+  border-radius: 25px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.365);
+  margin: 0 auto 0 auto;
+  padding-top: 30px;
 }
 
 .goal{
@@ -46,25 +52,25 @@ input:focus::placeholder{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #323232;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  border-radius: 25px;
-  border: 1px solid;
   padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.365);
 }
 
 .edit{
   position: absolute;
   top: 30px;
   left: 80px;
-  background: linear-gradient(45deg, #008000, #00ff00);
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #00a1a4;
+  color: #00a1a4;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 25px;
-  width: 25px;
 }
 
 .edit > span {
@@ -87,11 +93,8 @@ h3 > input {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   padding: 10px;
-  background-color: #323232;
   margin-top:20px;
-  border-top: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
+
 }
 
 .dailyForm{
@@ -106,22 +109,24 @@ h3 > input {
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   padding: 10px;
-  background-color: #323232;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  border-right: 1px solid;
 }
 
-.dailyForm > button{
-  width: 50px;
+.daily-btn{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #00a1a4;
+  color: white;
+  background-color: #00a1a4;
 }
 
 .reset{
   margin-top: 30px;
-  width: 110px;
-  height: 50px;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #850000, #ff1313);
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
 }
 
 .reset > span {
