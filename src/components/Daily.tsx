@@ -8,10 +8,10 @@ const Daily = () => {
         dailyCalories, 
         subtractMacros, 
         reset,
-        // quick10,
-        // quick100,
-        // quick20,
-        // quick50
+        quick10,
+        quick100,
+        quick20,
+        quick50
     }:any = useContext(Context);
     const initForm = {calories: '', protein: ''};
     const [formData, setFormData] = useState(initForm);
@@ -29,12 +29,12 @@ const Daily = () => {
 
         localStorage.removeItem('Daily Calories');
         localStorage.removeItem('Daily Protein');
-        if(!formData.calories){
-            formData.calories = '0'
-        };
-        if(!formData.protein)(
-            formData.protein = '0'
-        );
+        // if(!formData.calories){
+        //     formData.calories = '0'
+        // };
+        // if(!formData.protein)(
+        //     formData.protein = '0'
+        // );
         subtractMacros(formData['calories'], formData['protein']);
         setFormData(initForm);
     }
@@ -49,25 +49,27 @@ const Daily = () => {
             <form onSubmit={handleSubmit} className='dailyForm'>
                 <div className='daily-div'>
                     <div className='daily-c'>
-                        <button >-50 Calories</button>
-                        <button >-100 Calories</button>
+                        <button onClick={quick50}>-50 Calories</button>
+                        <button onClick={quick100}>-100 Calories</button>
                         <input
                             type="number"
                             name='calories'
                             value={formData['calories']}
                             onChange={handleChange}
                             placeholder='Add Calories'
+                            required
                             />
                     </div>
                     <div className='daily-p'>
-                        <button >-10 Protein</button>
-                        <button >-20 Protein</button>
+                        <button onClick={quick10}>-10 Protein</button>
+                        <button onClick={quick20}>-20 Protein</button>
                         <input
                             type="number"
                             name='protein'
                             value={formData['protein']}
                             onChange={handleChange}
                             placeholder='Add Protein'
+                            required
                             />
                     </div>
                 </div>
