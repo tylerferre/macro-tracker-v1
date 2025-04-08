@@ -29,12 +29,12 @@ const Daily = () => {
 
         localStorage.removeItem('Daily Calories');
         localStorage.removeItem('Daily Protein');
-        // if(!formData.calories){
-        //     formData.calories = '0'
-        // };
-        // if(!formData.protein)(
-        //     formData.protein = '0'
-        // );
+        if(!formData.calories){
+            formData.calories = '0'
+        };
+        if(!formData.protein)(
+            formData.protein = '0'
+        );
         subtractMacros(formData['calories'], formData['protein']);
         setFormData(initForm);
     }
@@ -57,7 +57,6 @@ const Daily = () => {
                             value={formData['calories']}
                             onChange={handleChange}
                             placeholder='Add Calories'
-                            required
                             />
                     </div>
                     <div className='daily-p'>
@@ -69,7 +68,6 @@ const Daily = () => {
                             value={formData['protein']}
                             onChange={handleChange}
                             placeholder='Add Protein'
-                            required
                             />
                     </div>
                 </div>
