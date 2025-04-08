@@ -21,7 +21,7 @@ const Goal = () => {
     }
 
     const handleSubmit = () => {
-        setGoal((prevState:any) => ({
+        setGoal((prevState:object) => ({
             ...prevState,
             calories: input['calories'],
             protein: input['protein']
@@ -29,7 +29,7 @@ const Goal = () => {
         localStorage.setItem('Calorie Goal', input['calories']);
         localStorage.setItem('Protein Goal', input['protein']);
 
-        setDaily((prevState:any) => ({
+        setDaily((prevState:object) => ({
             ...prevState,
             dailyCalories: input['calories'],
             dailyProtein: input['protein']
