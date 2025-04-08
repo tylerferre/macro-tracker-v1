@@ -26,23 +26,23 @@ const Goal = () => {
             calories: input['calories'],
             protein: input['protein']
         }))
-        localStorage.setItem('Calorie Goal', input['calories'])
-        localStorage.setItem('Protein Goal', input['protein'])
+        localStorage.setItem('Calorie Goal', input['calories']);
+        localStorage.setItem('Protein Goal', input['protein']);
 
         setDaily((prevState:any) => ({
             ...prevState,
             dailyCalories: input['calories'],
             dailyProtein: input['protein']
         }))
-        localStorage.setItem('Daily Calories', input['calories'])
-        localStorage.setItem('Daily Protein', input['protein'])
-        setEdit(false)
+        localStorage.setItem('Daily Calories', input['calories']);
+        localStorage.setItem('Daily Protein', input['protein']);
+        setEdit(false);
     }
 
     return (
         <div className="goal">
             <button className="edit" onClick={()=> setEdit(prev => !prev)}>{!edit ? <span>Edit Goal</span> : <span className="material-symbols-rounded">close</span>}</button>
-            <h1>Goal</h1>
+            <h1>GOAL</h1>
             <h3>Calories: 
                 {!edit ? <span> {calories}</span> 
                 : 
@@ -52,6 +52,7 @@ const Goal = () => {
                     value={input['calories']}
                     onChange={handleChange}
                     placeholder="Calories"
+                    required
                 />}
             </h3>
             <h3>Protein: 
@@ -63,9 +64,10 @@ const Goal = () => {
                     value={input['protein']}
                     onChange={handleChange}
                     placeholder="Protein"
+                    required
                 />}
             </h3>
-            {edit && <button className="daily-btn" onClick={handleSubmit}>Enter</button>}
+            {edit && <button className="daily-btn" onClick={handleSubmit}>SET</button>}
         </div>
     )
 }

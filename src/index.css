@@ -12,10 +12,11 @@ button{
 
 h1{
   text-decoration: underline;
+  font-weight: 400;
 }
 
 h3{
-  font-weight: 600;
+  font-weight: 400;
 }
 
 span{
@@ -45,6 +46,7 @@ input:focus{
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.365);
   margin: 0 auto 0 auto;
   padding-top: 30px;
+  
 }
 
 .goal{
@@ -56,7 +58,7 @@ input:focus{
   margin-right: auto;
   width: 70%;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 20px;
   box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.365);
 }
 
@@ -73,11 +75,11 @@ input:focus{
   align-items: center;
 }
 
-.edit > span {
+.edit span {
   font-size: small;
 }
 
-h3 > input {
+h3 input {
   width: 40px;
   height: 20px;
 }
@@ -112,11 +114,38 @@ h3 > input {
 }
 
 .daily-btn{
+  margin-top: 10px;
+  width: 80px;
+  height: 35px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #00a1a4;
   color: white;
   background-color: #00a1a4;
+}
+
+.daily-div {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.daily-c, .daily-p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.daily-c button, .daily-p button {
+  width: 145px;
+  border-radius: 10px;
+  border: none;
+  height: 29px;
+  background-color: #cfcfcf;
+  color: #696969;
 }
 
 .reset{
@@ -131,6 +160,15 @@ h3 > input {
 
 .reset > span {
   font-size: 30px;
+}
+
+.quick-100 {
+  width: 145px;
+  border-radius: 10px;
+  border: none;
+  height: 29px;
+  background-color: #cfcfcf;
+  color: #696969;
 }
 
 @media only screen and (min-width: 500px){
