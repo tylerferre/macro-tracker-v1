@@ -42,7 +42,7 @@ const Daily = () => {
     return (
         <>
             <div className='daily'>
-                <h1>CURRENT</h1>
+                <h1>REMAINING</h1>
                 <h3>Calories: <span>{dailyCalories}</span></h3>
                 <h3>Protein: <span>{dailyProtein}</span></h3>
             </div>
