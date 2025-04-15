@@ -4,9 +4,19 @@ const Context = createContext({});
 
 const ContextProvder = (props:any) => {
 
-    const [goal, setGoal] = useState({calories: localStorage.getItem('Calorie Goal') || '0', protein: localStorage.getItem('Protein Goal') || '0'})
-    const [daily, setDaily] = useState({dailyCalories: localStorage.getItem('Daily Calories') || '0', dailyProtein: localStorage.getItem('Daily Protein') || '0'})
+    interface GoalState {
+        calories: string;
+        protein: string;
+    };
 
+    interface DailyState {
+        dailyCalories: string;
+        dailyProtein: string;
+    };
+
+    const [goal, setGoal] = useState<GoalState>({calories: localStorage.getItem('Calorie Goal') || '0', protein: localStorage.getItem('Protein Goal') || '0'})
+    const [daily, setDaily] = useState<DailyState>({dailyCalories: localStorage.getItem('Daily Calories') || '0', dailyProtein: localStorage.getItem('Daily Protein') || '0'})
+console.log(typeof(goal.calories))
     const subtractMacros = (num1:string, num2:string) => {
         const calories = parseInt(num1);
         const protein = parseInt(num2);
