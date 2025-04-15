@@ -49,8 +49,8 @@ const Daily = () => {
             <form onSubmit={handleSubmit} className='dailyForm'>
                 <div className='daily-div'>
                     <div className='daily-c'>
-                        <button onClick={quick50}>-50 Calories</button>
-                        <button onClick={quick100}>-100 Calories</button>
+                        <span onClick={quick50}>-50 Calories</span>
+                        <span onClick={quick100}>-100 Calories</span>
                         <input
                             type="number"
                             name='calories'
@@ -60,8 +60,8 @@ const Daily = () => {
                             />
                     </div>
                     <div className='daily-p'>
-                        <button onClick={quick10}>-10 Protein</button>
-                        <button onClick={quick20}>-20 Protein</button>
+                        <span onClick={quick10}>-10 Protein</span>
+                        <span onClick={quick20}>-20 Protein</span>
                         <input
                             type="number"
                             name='protein'

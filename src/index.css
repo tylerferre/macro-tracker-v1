@@ -139,7 +139,12 @@ h3 input {
   gap: 10px;
 }
 
-.daily-c button, .daily-p button {
+.daily-c span, .daily-p span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
   width: 145px;
   border-radius: 10px;
   border: none;
@@ -147,6 +152,10 @@ h3 input {
   background-color: #cfcfcf;
   color: #696969;
 }
+
+.daily-c span:active, .daily-p span:active {
+  background-color: #bfbfbf;
+} 
 
 .reset{
   margin-top: 30px;
