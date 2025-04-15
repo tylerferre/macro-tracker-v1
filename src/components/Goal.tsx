@@ -3,14 +3,15 @@ import { Context } from "../ContextProvider";
 
 const Goal = () => {
 
-    interface InputState {
-        protein: string;
-        calories: string;
-    }
+    // interface InputState {
+    //     protein: string;
+    //     calories: string;
+    // }
 
     const {setGoal, protein, calories, setDaily}:any = useContext(Context);
     const [edit, setEdit] = useState(false);
-    const [input, setInput] = useState<InputState>({protein: protein || "", calories: calories || ""});
+    // const [input, setInput] = useState<InputState>({protein: protein || "", calories: calories || ""});
+    const [ input, setInput ] = useState({protein: protein || "", calories: calories || ""})
 
     const handleChange = (e:any) => {
         const {name, value} = e.target
