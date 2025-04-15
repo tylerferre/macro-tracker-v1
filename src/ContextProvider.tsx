@@ -39,37 +39,37 @@ console.log(typeof(goal.calories))
         localStorage.setItem('Daily Protein', goal['protein']);
     };
 
-    const quick100 = () => {
-        setDaily((prevState:any) => ({
-            ...prevState,
-            dailyCalories: prevState['dailyCalories'] - 100,
-            dailyProtein: prevState['dailyProtein']
-        }));
-    };
+    // const quick100 = () => {
+    //     setDaily((prevState:any) => ({
+    //         ...prevState,
+    //         dailyCalories: prevState['dailyCalories'] - 100,
+    //         dailyProtein: prevState['dailyProtein']
+    //     }));
+    // };
 
-    const quick50 = () => {
-        setDaily((prevState:any) => ({
-            ...prevState,
-            dailyCalories: prevState.dailyCalories - 50,
-            dailyProtein: prevState.dailyProtein
-        }));
-    };
+    // const quick50 = () => {
+    //     setDaily((prevState:any) => ({
+    //         ...prevState,
+    //         dailyCalories: prevState.dailyCalories - 50,
+    //         dailyProtein: prevState.dailyProtein
+    //     }));
+    // };
 
-    const quick10 = () => {
-        setDaily((prevState:any) => ({
-            ...prevState,
-            dailyCalories: prevState.dailyCalories,
-            dailyProtein: prevState.dailyProtein - 10
-        }));
-    };
+    // const quick10 = () => {
+    //     setDaily((prevState:any) => ({
+    //         ...prevState,
+    //         dailyCalories: prevState.dailyCalories,
+    //         dailyProtein: prevState.dailyProtein - 10
+    //     }));
+    // };
 
-    const quick20 = () => {
-        setDaily((prevState:any) => ({
-            ...prevState,
-            dailyCalories: prevState.dailyCalories,
-            dailyProtein: prevState.dailyProtein - 20
-        }));
-    };
+    // const quick20 = () => {
+    //     setDaily((prevState:any) => ({
+    //         ...prevState,
+    //         dailyCalories: prevState.dailyCalories,
+    //         dailyProtein: prevState.dailyProtein - 20
+    //     }));
+    // };
 
     return (
         <Context.Provider
@@ -80,10 +80,10 @@ console.log(typeof(goal.calories))
                 setDaily,
                 subtractMacros,
                 reset,
-                quick100,
-                quick50,
-                quick10,
-                quick20
+                // quick100,
+                // quick50,
+                // quick10,
+                // quick20
             }}
         >
             {props.children}
