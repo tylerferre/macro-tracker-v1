@@ -18,14 +18,14 @@ const Goal = () => {
             ...prevState,
             [name]:value
         }))
-    }
+    };
 
     const handleSubmit = () => {
         setGoal((prevState:object) => ({
             ...prevState,
             calories: input['calories'],
             protein: input['protein']
-        }))
+        }));
         localStorage.setItem('Calorie Goal', input['calories']);
         localStorage.setItem('Protein Goal', input['protein']);
 
@@ -33,11 +33,11 @@ const Goal = () => {
             ...prevState,
             dailyCalories: input['calories'],
             dailyProtein: input['protein']
-        }))
+        }));
         localStorage.setItem('Daily Calories', input['calories']);
         localStorage.setItem('Daily Protein', input['protein']);
         setEdit(false);
-    }
+    };
 
     return (
         <div className="goal">
@@ -72,4 +72,4 @@ const Goal = () => {
     )
 }
 
-export default Goal
+export default Goal;
