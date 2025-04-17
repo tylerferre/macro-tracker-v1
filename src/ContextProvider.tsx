@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 
 const Context = createContext({});
 
-const ContextProvder = (props:any) => {
+const ContextProvider = (props:any) => {
 
     interface GoalState {
         calories: string;
@@ -31,7 +31,6 @@ const ContextProvder = (props:any) => {
         localStorage.setItem('Daily Calories', daily['dailyCalories']);
         localStorage.setItem('Daily Protein', daily['dailyProtein']);
     },[daily]);
-
 
     const reset = () => {
         setDaily({dailyCalories: goal['calories'], dailyProtein: goal['protein']});
@@ -91,4 +90,4 @@ const ContextProvder = (props:any) => {
     );
 }
 
-export {Context, ContextProvder};
+export {Context, ContextProvider};
