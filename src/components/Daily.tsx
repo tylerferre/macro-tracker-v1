@@ -8,10 +8,10 @@ const Daily = () => {
         dailyCalories, 
         subtractMacros, 
         reset,
-        quick10,
-        quick100,
-        quick20,
-        quick50
+        // quick10,
+        // quick100,
+        // quick20,
+        // quick50
     }:any = useContext(Context);
     const initForm = {calories: '', protein: ''};
     const [formData, setFormData] = useState(initForm);
@@ -49,8 +49,8 @@ const Daily = () => {
             <form onSubmit={handleSubmit} className='dailyForm'>
                 <div className='daily-div'>
                     <div className='daily-c'>
-                        <span onClick={quick50}>-50 Calories</span>
-                        <span onClick={quick100}>-100 Calories</span>
+                        {/* <span onClick={quick50}>-50 Calories</span>
+                        <span onClick={quick100}>-100 Calories</span> */}
                         <input
                             type="number"
                             name='calories'
@@ -60,8 +60,8 @@ const Daily = () => {
                             />
                     </div>
                     <div className='daily-p'>
-                        <span onClick={quick10}>-10 Protein</span>
-                        <span onClick={quick20}>-20 Protein</span>
+                        {/* <span onClick={quick10}>-10 Protein</span>
+                        <span onClick={quick20}>-20 Protein</span> */}
                         <input
                             type="number"
                             name='protein'
