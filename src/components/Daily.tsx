@@ -29,12 +29,12 @@ const Daily = () => {
 
         localStorage.removeItem('Daily Calories');
         localStorage.removeItem('Daily Protein');
-        // if(!formData.calories){
-        //     formData.calories = '0'
-        // };
-        // if(!formData.protein)(
-        //     formData.protein = '0'
-        // );
+        if(!formData.calories){
+            formData.calories = '0'
+        };
+        if(!formData.protein)(
+            formData.protein = '0'
+        );
         subtractMacros(formData['calories'], formData['protein']);
         setFormData(initForm);
     }
